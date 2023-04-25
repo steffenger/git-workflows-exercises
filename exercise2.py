@@ -9,7 +9,7 @@ class Point2D:
     def __isub__(self, point: Vector):
         self._coordinates[0] -= point[0]
         self._coordinates[1] -= point[1]
-
+        return self
     def __iadd__(self, point: Vector):
         self._coordinates[0] += point[0]
         self._coordinates[1] += point[1]
