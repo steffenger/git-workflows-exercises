@@ -5,7 +5,10 @@ from exercise1 import Vector
 class Point2D:
     def __init__(self, x: float, y: float) -> None:
         self._coordinates = Vector([x, y])
-
+    def __iadd__(self, point: Vector):
+        self._coordinates[0] += point[0]
+        self._coordinates[1] += point[1]
+        return self
     @property
     def x(self) -> float:
         return self._coordinates[0]
